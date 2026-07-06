@@ -2,7 +2,7 @@ import { Link, type DocumentHead } from "@qwik.dev/router";
 import { component$ } from "@qwik.dev/core";
 
 export default component$(() => {
-  return <Link href="/en/blockchain">Blockchain</Link>;
+  return <Link href="/en">Blockchain</Link>;
 });
 
 // const OLD = component$(() => {
@@ -241,7 +241,7 @@ export default component$(() => {
 //         </section>
 //         <hr class="no-print" />
 //         <section
-//           class="block-section"
+//           class="section-block"
 //           id="summary"
 //           aria-labelledby="summary-heading"
 //           data-reveal
@@ -264,7 +264,7 @@ export default component$(() => {
 //         </section>
 //         <hr />
 //         <section
-//           class="block-section"
+//           class="section-block"
 //           id="experience"
 //           aria-labelledby="experience-heading"
 //         >
@@ -489,7 +489,7 @@ export default component$(() => {
 //         </section>
 //         <hr />
 //         <section
-//           class="block-section"
+//           class="section-block"
 //           id="skills"
 //           aria-labelledby="skills-heading"
 //           data-reveal
@@ -540,7 +540,7 @@ export default component$(() => {
 //         <hr />
 //         <div class="two-col">
 //           <section
-//             class="block-section"
+//             class="section-block"
 //             id="education"
 //             aria-labelledby="education-heading"
 //             data-reveal
@@ -571,7 +571,7 @@ export default component$(() => {
 //           </section>
 //           <hr />
 //           <section
-//             class="block-section"
+//             class="section-block"
 //             id="languages"
 //             aria-labelledby="languages-heading"
 //             data-reveal

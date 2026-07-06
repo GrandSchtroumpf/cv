@@ -1,4 +1,4 @@
-import { component$, $, useStyles$ } from "@qwik.dev/core";
+import { component$, $, useStyles$, useOn } from "@qwik.dev/core";
 import { Link } from "@qwik.dev/router";
 import style from "./nav.css?inline";
 
@@ -24,6 +24,84 @@ export const Nav = component$(() => {
     }
   });
 
+  useOn(
+    "qvisible",
+    $(() => {
+      const sections = document.querySelectorAll(".section-block");
+      const navLinks = document.querySelectorAll(".section-nav a");
+
+      // Maintain a live record of which sections are intersecting
+      const activeIntersections = new Map();
+      const determineActiveAnchor = () => {
+        // Edge Case: Handle absolute top of page
+        if (window.scrollY <= 10) {
+          highlightAnchor(sections[0].id);
+          return;
+        }
+
+        // Edge Case: Handle absolute bottom of page (reaches end of scroll)
+        if (
+          window.innerHeight + window.scrollY >=
+          document.documentElement.scrollHeight - 10
+        ) {
+          highlightAnchor(sections[sections.length - 1].id);
+          return;
+        }
+
+        let currentActiveId = null;
+        let maxIntersectionRatio = -1;
+
+        // Evaluate all currently visible sections
+        activeIntersections.forEach((entry, id) => {
+          // Strategy: Prioritize the section that occupies the largest percentage of the viewport
+          // For sections larger than the viewport, it safely captures them as they stay at a stable ratio.
+          if (entry.intersectionRatio > maxIntersectionRatio) {
+            maxIntersectionRatio = entry.intersectionRatio;
+            currentActiveId = id;
+          }
+        });
+
+        if (currentActiveId) {
+          highlightAnchor(currentActiveId);
+        }
+      };
+
+      const highlightAnchor = (id: string) => {
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === `#${id}`) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      };
+
+      // Initialize the observer
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Keep track of the entry and its visible ratio
+              activeIntersections.set(entry.target.id, entry);
+            } else {
+              activeIntersections.delete(entry.target.id);
+            }
+          });
+
+          determineActiveAnchor();
+        },
+        {
+          root: null, // defaults to viewport
+          // Shrink the top/bottom detection box slightly so highlights shift
+          // before a section completely leaves the screen
+          rootMargin: "-10% 0px -20% 0px",
+          threshold: [0, 0.1, 0.2, 0.4, 0.6, 0.8, 1.0], // Granular tracking for variable sizes
+        },
+      );
+      sections.forEach((section) => observer.observe(section));
+    }),
+  );
+
   return (
     <nav class="main-nav" aria-label="Section navigation">
       <a class="nav-top" href="#top">
@@ -42,7 +120,7 @@ export const Nav = component$(() => {
           height="24px"
           viewBox="0 -960 960 960"
           width="24px"
-          fill="#e3e3e3"
+          fill="currentColor"
         >
           <path d="M440-727 256-544l-56-56 280-280 280 280-56 57-184-184v287h-80v-287Zm0 487v-120h80v120h-80Zm0 160v-80h80v80h-80Z" />
         </svg>
@@ -60,6 +138,7 @@ export const Nav = component$(() => {
         <a class="listitem btn round" href="#education">
           Education
         </a>
+        <div class="listbox-focus" aria-hidden="true"></div>
       </div>
 
       <button popovertarget="settings" class="menu-trigger btn icon">

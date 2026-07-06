@@ -143,11 +143,11 @@ hr {
    Sections
    ========================================================= */
 
-.block-section {
+.section-block {
   padding-inline: 1rem;
 }
 
-.block-section h2 {
+.section-block h2 {
   font-size: 1.45rem;
   display: grid;
   gap: 0.5rem;
@@ -321,11 +321,12 @@ hr {
   background: var(--tertiary);
 }
 
-.card .link {
+.card .links {
   display: flex;
   gap: 1rem;
   & a {
     text-decoration: underline;
+    text-underline-offset: 0.25rem;
   }
 }
 
@@ -626,6 +627,7 @@ hr {
   }
   .two-col {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
   .two-col hr {
     border-top: 1px solid var(--line);

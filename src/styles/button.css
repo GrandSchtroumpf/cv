@@ -49,7 +49,6 @@ a.btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font: var(--mat-sys-label-large);
   border-radius: var(--btn-radius);
   box-sizing: border-box;
   border: none;

@@ -119,7 +119,7 @@ export const Page = component$<Props>(({ resume }) => {
         <Nav />
 
         <section
-          class="block-section"
+          class="section-block"
           id="summary"
           aria-labelledby="summary-heading"
           data-reveal=""
@@ -133,7 +133,7 @@ export const Page = component$<Props>(({ resume }) => {
         <hr />
 
         <section
-          class="block-section"
+          class="section-block"
           id="experience"
           aria-labelledby="experience-heading"
         >
@@ -222,7 +222,7 @@ export const Page = component$<Props>(({ resume }) => {
         <hr />
 
         <section
-          class="block-section"
+          class="section-block"
           id="skills"
           aria-labelledby="skills-heading"
           data-reveal=""
@@ -254,13 +254,8 @@ export const Page = component$<Props>(({ resume }) => {
 
         <hr />
 
-        <div class="two-col">
-          <section
-            class="block-section"
-            id="education"
-            aria-labelledby="education-heading"
-            data-reveal=""
-          >
+        <div class="two-col section-block" id="education">
+          <section aria-labelledby="education-heading" data-reveal="">
             <h2 id="education-heading">
               <span class="block-tag">block #education</span>Education
             </h2>
@@ -280,12 +275,7 @@ export const Page = component$<Props>(({ resume }) => {
 
           <hr />
 
-          <section
-            class="block-section"
-            id="languages"
-            aria-labelledby="languages-heading"
-            data-reveal=""
-          >
+          <section aria-labelledby="languages-heading" data-reveal="">
             <h2 id="languages-heading">
               <span class="block-tag">block #languages</span>Languages
             </h2>

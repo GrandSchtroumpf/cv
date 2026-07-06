@@ -168,10 +168,10 @@ main {
 /* =========================================================
    Sections
    ========================================================= */
-.block-section {
+.section-block {
   padding-block: 3rem;
 }
-.block-section h2 {
+.section-block h2 {
   font-size: 1.45rem;
   display: grid;
   gap: 0.5rem;
