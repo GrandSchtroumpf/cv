@@ -1,0 +1,204 @@
+@media not print {
+  html:has(input[name="theme"][value="system"]:checked) {
+    @media (prefers-color-scheme: light) {
+      --chroma-low: 4%;
+      --chroma-mid: 7%;
+      --chroma-high: 40%;
+
+      --light-lowest: 93%;
+      --light-low: 96%;
+      --light: 98%;
+      --light-high: 99%;
+      --light-highest: 100%;
+
+      --light-text-lowest: 50%;
+      --light-text-low: 40%;
+      --light-text: 20%;
+      --light-text-high: 10%;
+      --light-text-highest: 0%;
+
+      --light-color-container: 93%;
+      --light-color: 50%;
+      --light-on-color: 100%;
+
+      --light-divider: 80%;
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      --chroma-low: 4%;
+      --chroma-mid: 7%;
+      --chroma-high: 50%;
+
+      --light-lowest: 10%;
+      --light-low: 17%;
+      --light: 20%;
+      --light-high: 25%;
+      --light-highest: 30%;
+
+      --light-text-lowest: 70%;
+      --light-text-low: 80%;
+      --light-text: 90%;
+      --light-text-high: 99%;
+      --light-text-highest: 100%;
+
+      --light-color-container: 30%;
+      --light-color: 85%;
+      --light-on-color: 20%;
+
+      --light-divider: 40%;
+      color-scheme: dark;
+    }
+  }
+
+  html:has(input[name="theme"][value="light"]:checked) {
+    --chroma-low: 4%;
+    --chroma-mid: 7%;
+    --chroma-high: 40%;
+
+    --light-lowest: 93%;
+    --light-low: 96%;
+    --light: 98%;
+    --light-high: 99%;
+    --light-highest: 100%;
+
+    --light-text-lowest: 50%;
+    --light-text-low: 40%;
+    --light-text: 20%;
+    --light-text-high: 10%;
+    --light-text-highest: 0%;
+
+    --light-color-container: 93%;
+    --light-color: 50%;
+    --light-on-color: 100%;
+
+    --light-divider: 80%;
+    color-scheme: light;
+  }
+
+  html:has(input[name="theme"][value="dark"]:checked) {
+    --chroma-low: 4%;
+    --chroma-mid: 7%;
+    --chroma-high: 50%;
+
+    --light-lowest: 10%;
+    --light-low: 17%;
+    --light: 20%;
+    --light-high: 25%;
+    --light-highest: 30%;
+
+    --light-text-lowest: 70%;
+    --light-text-low: 80%;
+    --light-text: 90%;
+    --light-text-high: 99%;
+    --light-text-highest: 100%;
+
+    --light-color-container: 30%;
+    --light-color: 85%;
+    --light-on-color: 20%;
+
+    --light-divider: 40%;
+    color-scheme: dark;
+  }
+}
+
+@media print {
+  :root {
+    --chroma-low: 4%;
+    --chroma-mid: 7%;
+    --chroma-high: 40%;
+
+    --light-lowest: 93%;
+    --light-low: 96%;
+    --light: 98%;
+    --light-high: 99%;
+    --light-highest: 100%;
+
+    --light-text-lowest: 50%;
+    --light-text-low: 40%;
+    --light-text: 20%;
+    --light-text-high: 10%;
+    --light-text-highest: 0%;
+
+    --light-color-container: 93%;
+    --light-color: 50%;
+    --light-on-color: 100%;
+
+    --light-divider: 80%;
+    color-scheme: light;
+  }
+}
+
+:root {
+  --hue: 280deg;
+  --secondary-hue: calc(var(--hue) + 6deg);
+  --tertiary-hue: calc(var(--hue) + 48deg);
+  --variant-hue: calc(var(--hue) + 10deg);
+  --error-hue: 28deg;
+  --line: oklch(var(--light-divider) var(--chroma-low) var(--hue));
+
+  --alpha-hover: 12%;
+  --alpha-active: 18%;
+
+  --radius: 10px;
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --maxw: 1200px;
+  --topbar-height: 64px;
+
+  --elevation-highest:
+    oklch(10% 0.1 var(--hue) / 0.2) 0px 3px 5px -1px,
+    oklch(10% 0.1 var(--hue) / 0.14) 0px 6px 10px 0px,
+    oklch(10% 0.1 var(--hue) / 0.12) 0px 1px 18px 0px;
+  --elevation-high:
+    oklch(10% 0.1 var(--hue) / 0.2) 0px 3px 3px -2px,
+    oklch(10% 0.1 var(--hue) / 0.14) 0px 3px 4px 0px,
+    oklch(10% 0.1 var(--hue) / 0.12) 0px 1px 8px 0px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.32, 0, 0.67, 0);
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+html {
+  --surface-lowest: oklch(var(--light-lowest) var(--chroma-low) var(--hue));
+  --surface-low: oklch(var(--light-low) var(--chroma-low) var(--hue));
+  --surface: oklch(var(--light) var(--chroma-low) var(--hue));
+  --surface-high: oklch(var(--light-high) var(--chroma-low) var(--hue));
+  --surface-highest: oklch(var(--light-highest) var(--chroma-low) var(--hue));
+
+  --text-low: oklch(var(--light-text-low) var(--chroma-low) var(--hue));
+  --text: oklch(var(--light-text) var(--chroma-low) var(--hue));
+  --text-high: oklch(var(--light-text-high) var(--chroma-low) var(--hue));
+
+  --primary-container: oklch(
+    var(--light-color-container) var(--chroma-mid) var(--hue)
+  );
+  --primary: oklch(var(--light-color) var(--chroma-high) var(--hue));
+  --on-primary: oklch(var(--light-on-color) var(--chroma-mid) var(--hue));
+
+  --secondary-container: oklch(
+    var(--light-color-container) var(--chroma-mid) var(--secondary-hue)
+  );
+  --secondary: oklch(
+    var(--light-color) var(--chroma-high) var(--secondary-hue)
+  );
+  --on-secondary: oklch(
+    var(--light-on-color) var(--chroma-mid) var(--secondary-hue)
+  );
+
+  --tertiary-container: oklch(
+    var(--light-color-container) var(--chroma-mid) var(--tertiary-hue)
+  );
+  --tertiary: oklch(var(--light-color) var(--chroma-high) var(--tertiary-hue));
+  --on-tertiary: oklch(
+    var(--light-on-color) var(--chroma-mid) var(--tertiary-hue)
+  );
+
+  --error-container: oklch(
+    var(--light-color-container) var(--chroma-mid) var(--error-hue)
+  );
+  --error: oklch(var(--light-color) var(--chroma-high) var(--error-hue));
+  --on-error: oklch(var(--light-on-color) var(--chroma-mid) var(--error-hue));
+  accent-color: var(--primary);
+}

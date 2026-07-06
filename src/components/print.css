@@ -1,0 +1,147 @@
+@media print {
+  @page {
+    margin: 14mm 16mm;
+  }
+  .no-print {
+    display: none !important;
+  }
+
+  body::before,
+  .main-nav {
+    display: none;
+  }
+
+  html,
+  body {
+    background: #fff;
+    font-size: 11.5pt;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+  main {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  strong {
+    font-weight: 400;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .hero {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "photo intro"
+      "contact contact";
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: oklch(99% 0.005 var(--hue));
+  }
+  .hero .eyebrow {
+    display: none;
+  }
+  .hero .name {
+    font-size: 24pt;
+  }
+  .hero .title {
+    color: #000;
+  }
+  .hero .subtitle {
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+    justify-self: start;
+  }
+  .hero .photo {
+    width: 84px;
+    box-shadow: none;
+    outline: 1px solid #000;
+  }
+  .hero .contact ul {
+    grid-template-columns: 1fr;
+  }
+
+  .hero .intro {
+    gap: 0.25rem;
+  }
+  .hero .intro hgroup {
+    display: grid;
+    gap: 0rem;
+  }
+
+  .block-section h2 {
+    break-after: avoid;
+    margin-bottom: 0.9rem;
+  }
+  .block-tag {
+    display: none;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .chain {
+    position: relative;
+  }
+  .chain .block {
+    grid-template-columns: 1fr;
+  }
+  .chain .block::before,
+  .chain .marker {
+    display: none;
+  }
+
+  .chain .card {
+    border: none;
+    box-shadow: none;
+    transform: none;
+    padding: 1rem;
+    break-inside: avoid;
+    background-color: oklch(99% 0.005 var(--hue));
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  .chain .head {
+    display: flex;
+    justify-content: space-between;
+  }
+  .chain hgroup {
+    display: grid;
+    gap: 4pt;
+  }
+
+  .chain a {
+    font-size: 0.9rem;
+    text-decoration: underline;
+  }
+
+  .chain .genesis {
+    display: none;
+  }
+
+  .skills-group {
+    break-inside: avoid;
+  }
+  .skills-grid {
+    gap: 1rem 2rem;
+  }
+
+  .edu-list {
+    gap: 0.9rem;
+  }
+  .lang-list {
+    gap: 0.4rem;
+  }
+}
