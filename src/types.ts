@@ -45,11 +45,16 @@ export interface LanguageItem {
   proficiency: string;
 }
 
+export interface NavItem {
+  label: string;
+  href: string;
+}
+
 export interface Resume {
   profile: ProfileData;
   experience: ExperienceItem[];
   skills: SkillGroup[];
   education: EducationItem[];
   languages: LanguageItem[];
-  navigation: { label: string; href: string }[];
+  navigation: NavItem[];
 }

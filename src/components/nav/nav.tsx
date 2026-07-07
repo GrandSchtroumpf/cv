@@ -1,8 +1,13 @@
 import { component$, $, useStyles$, useOn } from "@qwik.dev/core";
 import { Link } from "@qwik.dev/router";
 import style from "./nav.css?inline";
+import { NavItem } from "~/types";
 
-export const Nav = component$(() => {
+interface Props {
+  nav: NavItem[];
+}
+
+export const Nav = component$<Props>(({ nav }) => {
   useStyles$(style);
   const changeTheme = $((input: HTMLInputElement) => {
     const value = input.value;
@@ -103,7 +108,7 @@ export const Nav = component$(() => {
   );
 
   return (
-    <nav class="main-nav" aria-label="Section navigation">
+    <nav class="main-nav no-print" aria-label="Section navigation">
       <a class="nav-top" href="#top">
         <img
           src="/img/profile-480w.webp"
@@ -126,18 +131,11 @@ export const Nav = component$(() => {
         </svg>
       </a>
       <div class="section-nav listbox">
-        <a class="listitem btn round" href="#summary">
-          Profile
-        </a>
-        <a class="listitem btn round" href="#experience">
-          Experience
-        </a>
-        <a class="listitem btn round" href="#skills">
-          Skills
-        </a>
-        <a class="listitem btn round" href="#education">
-          Education
-        </a>
+        {nav.map((item, index) => (
+          <a class="listitem btn round" href={item.href} key={index}>
+            {item.label}
+          </a>
+        ))}
         <div class="listbox-focus" aria-hidden="true"></div>
       </div>
 

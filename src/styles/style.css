@@ -56,7 +56,7 @@ button:focus-visible,
 /* =========================================================
    Layout shell
    ========================================================= */
-main {
+.main {
   max-width: var(--maxw);
   margin-inline: auto;
   padding: 0 1.5rem 4rem;
