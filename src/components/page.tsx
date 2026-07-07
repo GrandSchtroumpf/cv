@@ -147,10 +147,7 @@ export const Page = component$<Props>(({ resume }) => {
                 <dd>
                   <ul class="tag-list">
                     {group.tags.map((tag, tagIdx) => (
-                      <li
-                        key={tagIdx}
-                        class={`tag ${group.category === "Core strengths" ? "tag--core" : ""}`}
-                      >
+                      <li key={tagIdx} class={["tag", index ? "" : "core"]}>
                         {tag}
                       </li>
                     ))}

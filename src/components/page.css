@@ -277,7 +277,7 @@
     background: var(--primary-container);
     color: var(--primary);
   }
-  .tag--core {
+  .tag.core {
     background: var(--primary-container);
     border-color: var(--primary);
     color: var(--primary);

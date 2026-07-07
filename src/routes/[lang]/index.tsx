@@ -43,7 +43,7 @@ export const head: DocumentHead = ({ params, url }) => {
       },
       {
         name: "og:image",
-        content: `${url.origin}/profile-480w.webp`,
+        content: `${url.origin}/img/profile-480w.webp`,
       },
       {
         name: "og:image:width",

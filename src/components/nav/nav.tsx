@@ -1,5 +1,5 @@
 import { component$, $, useStyles$, useOn } from "@qwik.dev/core";
-import { Link } from "@qwik.dev/router";
+import { Link, useLocation } from "@qwik.dev/router";
 import style from "./nav.css?inline";
 import { NavItem } from "~/types";
 
@@ -8,27 +8,8 @@ interface Props {
 }
 
 export const Nav = component$<Props>(({ nav }) => {
+  const location = useLocation();
   useStyles$(style);
-  const changeTheme = $((input: HTMLInputElement) => {
-    const value = input.value;
-    sessionStorage.setItem("theme", value);
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const img = document.getElementById("profile-img");
-    if (!img) return;
-    const origin = img.getBoundingClientRect();
-    const x = origin.left + origin.width / 2;
-    const y = origin.top + origin.height / 2;
-
-    if (document.startViewTransition) {
-      const root = document.documentElement;
-      root.style.setProperty("--vt-x", `${x}px`);
-      root.style.setProperty("--vt-y", `${y}px`);
-      document.startViewTransition(async () => {
-        await new Promise((resolve) => setTimeout(resolve, 10));
-      });
-    }
-  });
-
   useOn(
     "qvisible",
     $(() => {
@@ -130,7 +111,7 @@ export const Nav = component$<Props>(({ nav }) => {
           <path d="M440-727 256-544l-56-56 280-280 280 280-56 57-184-184v287h-80v-287Zm0 487v-120h80v120h-80Zm0 160v-80h80v80h-80Z" />
         </svg>
       </a>
-      <div class="section-nav listbox">
+      <div class="section-nav listbox underline">
         {nav.map((item, index) => (
           <a class="listitem btn round" href={item.href} key={index}>
             {item.label}
@@ -153,15 +134,13 @@ export const Nav = component$<Props>(({ nav }) => {
       <div id="settings" popover="auto" class="menu">
         <div role="menu" class="menu-content">
           <h2>Settings</h2>
-          <div role="radiogroup" class="listbox" aria-label="Color theme">
+          <div
+            role="radiogroup"
+            class="listbox themes fill"
+            aria-label="Color theme"
+          >
             <label for="light-theme" class="listitem">
-              <input
-                id="light-theme"
-                type="radio"
-                name="theme"
-                value="light"
-                onChange$={(e, el) => changeTheme(el)}
-              />
+              <input id="light-theme" type="radio" name="theme" value="light" />
               <svg
                 aria-label="Light theme"
                 height="24px"
@@ -179,7 +158,6 @@ export const Nav = component$<Props>(({ nav }) => {
                 type="radio"
                 name="theme"
                 value="system"
-                onChange$={(e, el) => changeTheme(el)}
                 checked
               />
               <svg
@@ -194,13 +172,7 @@ export const Nav = component$<Props>(({ nav }) => {
             </label>
 
             <label for="dark-theme" class="listitem">
-              <input
-                id="dark-theme"
-                type="radio"
-                name="theme"
-                value="dark"
-                onChange$={(e, el) => changeTheme(el)}
-              />
+              <input id="dark-theme" type="radio" name="theme" value="dark" />
               <svg
                 aria-label="Dark theme"
                 height="24px"
@@ -211,14 +183,26 @@ export const Nav = component$<Props>(({ nav }) => {
                 <path d="M480-120q-151 0-255.5-104.5T120-480q0-138 90-239.5T440-838q13-2 23 3.5t16 14.5q6 9 6.5 21t-7.5 23q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q11-7 22.5-6.5T819-479q10 5 15.5 15t3.5 24q-14 138-117.5 229T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
               </svg>
             </label>
+            <div class="listbox-focus" aria-hidden="true"></div>
           </div>
-          <nav aria-label="Change language" class="listbox">
-            <Link class="listitem" href="/en">
+          <nav aria-label="Change language" class="listbox fill langs">
+            <Link
+              class="listitem"
+              href="/en"
+              aria-current={location.params.lang === "en" ? "page" : false}
+              scroll={false}
+            >
               English
             </Link>
-            <Link class="listitem" href="/fr">
+            <Link
+              class="listitem"
+              href="/fr"
+              aria-current={location.params.lang === "fr" ? "page" : false}
+              scroll={false}
+            >
               Français
             </Link>
+            <div class="listbox-focus" aria-hidden="true"></div>
           </nav>
           <hr />
           <button
