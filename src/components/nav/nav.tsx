@@ -1,13 +1,14 @@
 import { component$, $, useStyles$, useOn } from "@qwik.dev/core";
 import { Link, useLocation } from "@qwik.dev/router";
 import style from "./nav.css?inline";
-import { NavItem } from "~/types";
+import { Resume } from "~/types";
 
 interface Props {
-  nav: NavItem[];
+  resume: Resume;
 }
 
-export const Nav = component$<Props>(({ nav }) => {
+export const Nav = component$<Props>(({ resume }) => {
+  const nav = resume.navigation;
   const location = useLocation();
   useStyles$(style);
   useOn(
@@ -100,6 +101,7 @@ export const Nav = component$<Props>(({ nav }) => {
           decoding="sync"
           loading="eager"
           fetchPriority="high"
+          alt="Profile picture"
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"

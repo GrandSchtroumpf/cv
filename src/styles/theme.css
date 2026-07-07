@@ -1,4 +1,4 @@
-@media not print {
+@media not print and not (prefers-contrast: more) {
   html:has(input[name="theme"][value="system"]:checked) {
     @media (prefers-color-scheme: light) {
       --chroma-low: 4%;
@@ -101,6 +101,59 @@
   }
 }
 
+@media (prefers-contrast: more) and (prefers-color-scheme: light) {
+  :root {
+    --chroma-low: 4%;
+    --chroma-mid: 7%;
+    --chroma-high: 40%;
+
+    --light-lowest: 93%;
+    --light-low: 96%;
+    --light: 98%;
+    --light-high: 99%;
+    --light-highest: 100%;
+
+    --light-text-lowest: 20%;
+    --light-text-low: 15%;
+    --light-text: 10%;
+    --light-text-high: 5%;
+    --light-text-highest: 0%;
+
+    --light-color-container: 93%;
+    --light-color: 50%;
+    --light-on-color: 100%;
+
+    --light-divider: 80%;
+    color-scheme: light;
+  }
+}
+@media (prefers-contrast: more) and (prefers-color-scheme: dark) {
+  :root {
+    --chroma-low: 4%;
+    --chroma-mid: 7%;
+    --chroma-high: 50%;
+
+    --light-lowest: 0%;
+    --light-low: 5%;
+    --light: 20%;
+    --light-high: 25%;
+    --light-highest: 30%;
+
+    --light-text-lowest: 85%;
+    --light-text-low: 90%;
+    --light-text: 95%;
+    --light-text-high: 99%;
+    --light-text-highest: 100%;
+
+    --light-color-container: 30%;
+    --light-color: 85%;
+    --light-on-color: 0%;
+
+    --light-divider: 40%;
+    color-scheme: dark;
+  }
+}
+
 @media print {
   :root {
     --chroma-low: 4%;
@@ -159,6 +212,7 @@
   --ease-in: cubic-bezier(0.32, 0, 0.67, 0);
   --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-in-out-back: cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 html {
   --surface-lowest: oklch(var(--light-lowest) var(--chroma-low) var(--hue));

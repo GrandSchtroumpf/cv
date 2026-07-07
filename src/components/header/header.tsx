@@ -97,6 +97,11 @@ export const Header = component$<Props>(({ profile, ...props }) => {
           fetchPriority="high"
           alt={profile.avatarAlt}
         />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="7" class="internal" />
+          <circle r="2" fill="white" cx="9" cy="11" class="eye" />
+          <circle r="2" fill="white" cx="15" cy="11" class="eye" />
+        </svg>
       </figure>
     </header>
   );

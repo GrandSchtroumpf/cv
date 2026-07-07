@@ -4,17 +4,25 @@ import { Header } from "./header/header";
 import type { Resume } from "../types";
 import style from "./page.css?inline";
 import print from "./print.css?inline";
+import { useLocation } from "@qwik.dev/router";
 
 interface Props {
   resume: Resume;
 }
 
+const formatDate = (date: string, local: string) => {
+  return new Date(date).toLocaleDateString(local, {
+    year: "numeric",
+    month: "short",
+  });
+};
+
 export const Page = component$<Props>(({ resume }) => {
   useStyles$(style);
   useStyles$(print);
-  const { profile, experience, skills, education, languages, navigation } =
-    resume;
-
+  const location = useLocation();
+  const { profile, experience, skills, education, languages } = resume;
+  const lang = location.params.lang;
   return (
     <>
       <a class="skip-link" href="#main">
@@ -23,8 +31,8 @@ export const Page = component$<Props>(({ resume }) => {
 
       <Header class="no-print" profile={profile} />
 
-      <main class="main">
-        <Nav nav={navigation} />
+      <main id="main" class="main">
+        <Nav resume={resume} />
         <Header class="print-only" profile={profile} />
 
         <section
@@ -69,24 +77,12 @@ export const Page = component$<Props>(({ resume }) => {
                     </hgroup>
                     <div class="meta">
                       <p class="duration">
-                        <time
-                          dateTime={
-                            item.startDate.replace(
-                              /(\w+)\s(\d+)/,
-                              "$2-09",
-                            ) /* basic fallback format */
-                          }
-                        >
-                          {item.startDate}
+                        <time dateTime={item.startDate}>
+                          {formatDate(item.startDate, lang)}
                         </time>
                         —
-                        <time
-                          dateTime={item.endDate.replace(
-                            /(\w+)\s(\d+)/,
-                            "$2-06",
-                          )}
-                        >
-                          {item.endDate}
+                        <time dateTime={item.endDate}>
+                          {formatDate(item.endDate, lang)}
                         </time>
                         <span>({item.duration})</span>
                       </p>
