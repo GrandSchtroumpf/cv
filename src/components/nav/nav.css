@@ -240,7 +240,7 @@
   }
 
   @media (width < 600px) {
-    top: 0;
+    top: -1px;
     &::before {
       border-radius: 0;
     }
@@ -257,6 +257,11 @@
           transform: scale(1);
         }
       }
+    }
+  }
+  @media (width < 450px) {
+    .section-nav {
+      font-size: 0.7rem;
     }
   }
 }

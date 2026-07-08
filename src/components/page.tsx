@@ -29,7 +29,7 @@ export const Page = component$<Props>(({ resume }) => {
         Skip to main content
       </a>
 
-      <Header class="no-print" profile={profile} />
+      <Header class="no-print" profile={profile} id="top" />
 
       <main id="main" class="main">
         <Nav resume={resume} />
@@ -41,7 +41,7 @@ export const Page = component$<Props>(({ resume }) => {
           aria-labelledby="summary-heading"
           data-reveal=""
         >
-          <h2 id="summary-heading" class="no-print">
+          <h2 id="summary-heading">
             <span class="block-tag">block #profile</span>Summary
           </h2>
           <p class="summary-text" dangerouslySetInnerHTML={profile.summary}></p>

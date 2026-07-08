@@ -522,8 +522,8 @@
    Print / ATS-friendly stylesheet
    ========================================================= */
 
-@media not print {
+@media screen {
   .print-only {
-    display: none;
+    display: none !important;
   }
 }

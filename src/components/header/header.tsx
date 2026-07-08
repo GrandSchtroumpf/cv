@@ -4,13 +4,14 @@ import style from "./header.css?inline";
 
 interface Props {
   class?: string;
+  id?: string;
   profile: ProfileData;
 }
 
 export const Header = component$<Props>(({ profile, ...props }) => {
   useStyles$(style);
   return (
-    <header class={["hero", props.class]} id="top">
+    <header class={["hero", props.class]} id={props.id}>
       <div class="intro">
         <p class="eyebrow" data-reveal="">
           <span class="ledger-dot" aria-hidden="true"></span>
@@ -54,12 +55,12 @@ export const Header = component$<Props>(({ profile, ...props }) => {
               <path d="M177.7,346.9c-28.6,0-46.5,15.6-49.8,26.6v-25.1H71.8c0.7,13.3,0,159.7,0,159.7h56.1v-86.3c0-4.9-0.2-9.7,1.2-13.1 c3.8-9.6,12.1-19.6,27-19.6c19.5,0,28.3,14.8,28.3,36.4v82.6H241v-88.8C241,369.9,213.2,346.9,177.7,346.9z" />
             </svg>
             <a
-              href="https://github.com/grandschtroumpf"
+              href="https://linkedin.com/in/francois-guezengar/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span class="no-print">github.com/grandschtroumpf</span>
-              <span class="print-only">https://github.com/grandschtroumpf</span>
+              <span class="no-print">linkedin/in/francois-guezengar</span>
+              <span class="print-only">https://linkedin.com/in/francois-guezengar/</span>
             </a>
           </li>
           <li>
