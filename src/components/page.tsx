@@ -32,8 +32,8 @@ export const Page = component$<Props>(({ resume }) => {
 
       <Header class="no-print" profile={profile} id="top" />
 
+      <Nav resume={resume} />
       <main id="main" class="main">
-        <Nav resume={resume} />
         <Header class="print-only" profile={profile} />
 
         <section

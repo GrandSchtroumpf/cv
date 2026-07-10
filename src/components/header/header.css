@@ -13,7 +13,7 @@
       "intro photo"
       "contact photo";
     gap: 2.5rem;
-    padding: 80px 1rem;
+    padding-inline: 1rem;
     box-sizing: border-box;
   }
   .hero .intro {
@@ -148,6 +148,23 @@
     & svg {
       translate: 0 0;
       animation: rotate 1s 0.5s both var(--ease-in-out-back);
+    }
+  }
+
+  @media (width < 760px) {
+    .hero {
+      grid-template-areas:
+        "photo"
+        "intro"
+        "contact";
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      padding-block: 1rem;
+    }
+    .hero .photo {
+      order: -1;
+      width: 100px;
+      justify-self: center;
     }
   }
 }

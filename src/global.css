@@ -8,7 +8,8 @@
 
 body {
   display: grid;
-  padding-bottom: 200px;
+  gap: 3rem;
+  padding-block: 2rem 200px;
 }
 
 body::before {

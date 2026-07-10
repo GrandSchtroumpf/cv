@@ -10,7 +10,7 @@
   }
 
   hr {
-    width: 100%;
+    width: 90%;
   }
 
   /* =========================================================
@@ -18,7 +18,7 @@
     ========================================================= */
 
   .section-block {
-    padding-inline: 0.5rem;
+    padding-inline: 1rem;
   }
 
   .section-block h2 {
@@ -446,20 +446,7 @@
   .print-btn span {
     display: none;
   }
-  .hero {
-    grid-template-areas:
-      "photo"
-      "intro"
-      "contact";
-    grid-template-columns: 1fr;
-    gap: 1.75rem;
-    padding-block: 3rem 2rem;
-  }
-  .hero .photo {
-    order: -1;
-    width: 100px;
-    justify-self: center;
-  }
+
   .contact ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -500,8 +487,7 @@
     gap: 0.5rem 1rem;
   }
   .chain .meta {
-    display: flex;
-    justify-content: space-between;
+    justify-items: start;
   }
   .chain .block {
     grid-template-columns: 1fr;

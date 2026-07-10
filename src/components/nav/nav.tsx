@@ -19,7 +19,22 @@ export const Nav = component$<Props>(({ resume }) => {
         import('@oddbird/css-anchor-positioning/fn').then(p => p.default());
       }
 
-      // 
+      // Manage topnav
+      const hideObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const bar = document.getElementById('navbar') as HTMLElement;
+            if (entry.isIntersecting) {
+              bar.classList.remove('is-visible');
+            } else {
+              bar.classList.add('is-visible');
+            }
+          });
+        }
+      );
+      hideObserver.observe(document.getElementById('top')!)
+
+      // manage nav
       const sections = document.querySelectorAll(".section-block");
       const navLinks = document.querySelectorAll(".section-nav a");
 
@@ -96,7 +111,7 @@ export const Nav = component$<Props>(({ resume }) => {
   );
 
   return (
-    <nav class="main-nav no-print" aria-label="Section navigation">
+    <nav id="navbar" class="main-nav no-print" aria-label="Section navigation">
       <a class="nav-top" href="#top">
         <img
           src="/img/profile-480w.webp"

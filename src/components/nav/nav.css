@@ -247,22 +247,16 @@
 
 
   @media (width < 600px) {
-    @supports (container-type: scroll-state) {
-      &::before,
-      & > * {
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.2s var(--ease-out);
-        @container scroll-state(stuck: top) {
-          pointer-events: unset;
-          opacity: 1;
-        }
-      }
+    position: fixed;
+    top: 0px;
+    padding: 0.5rem 1rem;
+    transform: translateY(-100%);
+    transition: transform 0.2s var(--ease-out);
+
+    &.is-visible {
+      transform: translate(0);
     }
 
-
-    top: env(safe-area-inset-bottom, 0px);
-    padding: 0.5rem 1rem;
     &::before {
       border-radius: 0;
     }
