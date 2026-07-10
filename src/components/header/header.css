@@ -14,6 +14,7 @@
       "contact photo";
     gap: 2.5rem;
     padding: 80px 1rem;
+    box-sizing: border-box;
   }
   .hero .intro {
     grid-area: intro;

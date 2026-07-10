@@ -18,7 +18,7 @@
     ========================================================= */
 
   .section-block {
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
   }
 
   .section-block h2 {
@@ -50,7 +50,6 @@
   .chain {
     display: grid;
     gap: 3rem;
-    margin-left: 2px;
   }
   .chain .block {
     position: relative;
@@ -109,7 +108,7 @@
 
   .chain .card {
     position: relative;
-    padding: 1.4rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     display: grid;
     gap: 0.6rem;
     isolation: isolate;
@@ -184,7 +183,7 @@
   }
   .chain .card ul {
     display: grid;
-    gap: 0.45rem;
+    gap: 0.5rem;
   }
   .chain .card li {
     position: relative;
@@ -196,7 +195,7 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 0.55em;
+    top: 0.6rem;
     width: 5px;
     height: 5px;
     border-radius: 50%;
@@ -487,9 +486,13 @@
 }
 
 @media (max-width: 600px) {
+
   .contact ul {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .chain {
+    gap: 1.5rem;
   }
   .chain .head {
     display: grid;
@@ -503,6 +506,9 @@
   .chain .block {
     grid-template-columns: 1fr;
   }
+  .chain .card {
+    padding: 1rem;
+  }
   .chain .marker,
   .chain .block::before,
   .chain .genesis {
@@ -515,6 +521,9 @@
   .two-col hr {
     border-top: 1px solid var(--line);
     width: 100%;
+  }
+  hr {
+    display: none; /* for some reason this is causing overflow */
   }
 }
 

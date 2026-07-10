@@ -2,6 +2,10 @@
 @import "./styles/button.css";
 @import "./styles/reset.css";
 
+:root {
+  view-transition-name: none;
+}
+
 body {
   display: grid;
   padding-bottom: 200px;

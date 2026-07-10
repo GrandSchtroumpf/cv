@@ -23,6 +23,7 @@ export const Page = component$<Props>(({ resume }) => {
   const location = useLocation();
   const { profile, experience, skills, education, languages } = resume;
   const lang = location.params.lang;
+
   return (
     <>
       <a class="skip-link" href="#main">

@@ -1,7 +1,7 @@
 import { component$, $, useStyles$, useOn } from "@qwik.dev/core";
 import { Link, useLocation } from "@qwik.dev/router";
-import style from "./nav.css?inline";
 import { Resume } from "~/types";
+import style from "./nav.css?inline";
 
 interface Props {
   resume: Resume;
@@ -14,6 +14,12 @@ export const Nav = component$<Props>(({ resume }) => {
   useOn(
     "qvisible",
     $(() => {
+      // load anchor if needed
+      if (!("anchorName" in document.documentElement.style)) {
+        import('@oddbird/css-anchor-positioning/fn').then(p => p.default());
+      }
+
+      // 
       const sections = document.querySelectorAll(".section-block");
       const navLinks = document.querySelectorAll(".section-nav a");
 
