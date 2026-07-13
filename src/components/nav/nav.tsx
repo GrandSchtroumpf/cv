@@ -16,23 +16,21 @@ export const Nav = component$<Props>(({ resume }) => {
     $(() => {
       // load anchor if needed
       if (!("anchorName" in document.documentElement.style)) {
-        import('@oddbird/css-anchor-positioning/fn').then(p => p.default());
+        import("@oddbird/css-anchor-positioning/fn").then((p) => p.default());
       }
 
       // Manage topnav
-      const hideObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            const bar = document.getElementById('navbar') as HTMLElement;
-            if (entry.isIntersecting) {
-              bar.classList.remove('is-visible');
-            } else {
-              bar.classList.add('is-visible');
-            }
-          });
-        }
-      );
-      hideObserver.observe(document.getElementById('top')!)
+      const hideObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const bar = document.getElementById("navbar") as HTMLElement;
+          if (entry.isIntersecting) {
+            bar.classList.remove("is-visible");
+          } else {
+            bar.classList.add("is-visible");
+          }
+        });
+      });
+      hideObserver.observe(document.getElementById("top")!);
 
       // manage nav
       const sections = document.querySelectorAll(".section-block");
@@ -115,7 +113,7 @@ export const Nav = component$<Props>(({ resume }) => {
       <a class="nav-top" href="#top">
         <img
           src="/img/profile-480w.webp"
-          srcset="/img/profile-240w.webp 240w, /img/profile-480w.webp 480w, /img/profile-960w.webp 960w"
+          srcset="/img/profile-120w.webp 120w, /img/profile-240w.webp 240w, /img/profile-480w.webp 480w, /img/profile-960w.webp 960w"
           sizes="auto"
           width={40}
           height={40}

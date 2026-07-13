@@ -60,7 +60,9 @@ export const Header = component$<Props>(({ profile, ...props }) => {
               rel="noopener noreferrer"
             >
               <span class="no-print">linkedin/in/francois-guezengar</span>
-              <span class="print-only">https://linkedin.com/in/francois-guezengar/</span>
+              <span class="print-only">
+                https://linkedin.com/in/francois-guezengar/
+              </span>
             </a>
           </li>
           <li>
@@ -89,7 +91,7 @@ export const Header = component$<Props>(({ profile, ...props }) => {
       <figure id="profile-img" class="photo" data-reveal="">
         <img
           src="/img/profile-480w.webp"
-          srcset="/img/profile-240w.webp 240w, /img/profile-480w.webp 480w, /img/profile-960w.webp 960w"
+          srcset="/img/profile-120w.webp 120w, /img/profile-240w.webp 240w, /img/profile-480w.webp 480w, /img/profile-960w.webp 960w"
           sizes="auto"
           width={480}
           height={480}
