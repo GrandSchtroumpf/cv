@@ -109,7 +109,7 @@
     display: grid;
     grid-template-areas: "stack";
     margin: 0;
-    width: clamp(120px, 18vw, 168px);
+    width: clamp(120px, 17vw, 200px);
     aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;

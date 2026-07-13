@@ -112,14 +112,11 @@ export const Nav = component$<Props>(({ resume }) => {
     <nav id="navbar" class="main-nav no-print" aria-label="Section navigation">
       <a class="nav-top" href="#top">
         <img
-          src="/img/profile-480w.webp"
-          srcset="/img/profile-120w.webp 120w, /img/profile-240w.webp 240w, /img/profile-480w.webp 480w, /img/profile-960w.webp 960w"
-          sizes="auto"
+          src="/img/profile-120w.webp"
+          srcset="/img/profile-40w.webp 40w, /img/profile-80w.webp 80w, /img/profile-120w.webp 120w"
           width={40}
           height={40}
-          decoding="sync"
-          loading="eager"
-          fetchPriority="high"
+          loading="lazy"
           alt="Profile picture"
         />
         <svg

@@ -92,9 +92,9 @@ export const Header = component$<Props>(({ profile, ...props }) => {
         <img
           src="/img/profile-480w.webp"
           srcset="/img/profile-120w.webp 120w, /img/profile-240w.webp 240w, /img/profile-480w.webp 480w, /img/profile-960w.webp 960w"
-          sizes="auto"
-          width={480}
-          height={480}
+          sizes="auto, (max-width: 760px) 120px, (max-width: 1220px) 17vw, 200px"
+          width={200}
+          height={200}
           decoding="sync"
           loading="eager"
           fetchPriority="high"
