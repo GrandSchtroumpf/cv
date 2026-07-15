@@ -59,9 +59,10 @@
     grid-area: contact;
   }
   .contact ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    gap: 1rem 2rem;
   }
   .contact li {
     display: flex;

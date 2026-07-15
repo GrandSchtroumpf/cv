@@ -7,11 +7,11 @@ import {
 import { Page } from "~/components/page";
 import { Resume } from "~/types";
 
-const langs = import.meta.glob("../../data/base/*.ts");
+const langs = import.meta.glob("../../data/blockchain/*.ts");
 
 export const useData = routeLoader$(async (res) => {
   const { lang } = res.params;
-  const value = await langs[`../../data/base/${lang}.ts`]();
+  const value = await langs[`../../data/blockchain/${lang}.ts`]();
   return (value as { data: Resume }).data;
 });
 

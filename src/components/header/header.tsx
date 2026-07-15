@@ -43,6 +43,25 @@ export const Header = component$<Props>(({ profile, ...props }) => {
           </li>
           <li>
             <svg
+              aria-label="website"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 -960 960 960"
+            >
+              <path d="M40-120v-80h880v80H40Zm120-120q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v440q0 33-23.5 56.5T800-240H160Zm0-80h640v-440H160v440Zm0 0v-440 440Z" />
+            </svg>
+            <a
+              href="https://francoisguezengar.vercel.app/en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="no-print">francoisguezengar.vercel.app</span>
+              <span class="print-only">https://francoisguezengar.vercel.app/en</span>
+            </a>
+          </li>
+          <li>
+            <svg
               aria-label="linkedin"
               width="24"
               height="24"
