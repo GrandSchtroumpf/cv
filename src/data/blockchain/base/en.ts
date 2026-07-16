@@ -3,16 +3,17 @@ import { Resume } from "~/types";
 export const data: Resume = {
   profile: {
     name: "François Guezengar",
-    title: "Web3 Developer",
+    title: "Senior Software Engineer",
     status: "Available for full time engagements",
     timezone: "France",
     email: "francois.guezengar@gmail.com",
     avatarAlt: "Portrait of François Guezengar, smiling, wearing a grey shirt",
     summary: `
-      For the past <strong>10 years</strong> I've specialized in Web3/DeFi infrastructure and advanced frontend architecture.
+      For the past 10 years I've specialized in <strong>opensource</strong> web3 infrastructure and advanced frontend architecture.
       As a DeFi Engineer at Bancor, I owned the Carbon DeFi trading app, and deployed it over <strong>6 chains</strong>.
-      Previously, as CTO at Cascade8, I shipped 7 apps in a <strong>fast-moving environment</strong> with strict deadline while keeping high quality product end-to-end.
-      I collaborate easily with product, design, and QA, bringing a <strong>user centric</strong> view on the table with security, performance and accessibility in mind.`,
+      Previously, as CTO at Cascade8, I shipped <strong>7 unified apps</strong> with strict deadline while keeping high quality product end-to-end through solid tests suite & automation.
+      I collaborate easily with product, design, and QA, bringing a <strong>user centric</strong> view on the table with security, performance and accessibility in mind.
+      I love crafting <strong>adaptive components & design system</strong> to design the best experience for everyone, everywhere, from every devices`,
   },
   navigation: [
     { label: "Summary", href: "#summary" },
@@ -45,8 +46,8 @@ export const data: Resume = {
       company: "Cascade8",
       location: "Remote from France",
       startDate: "2018-11",
-      endDate: "2024-06",
-      duration: "5.5 years",
+      endDate: "2023-06",
+      duration: "5 years",
       description:
         "Web-based dApp suite automating revenue sharing for the cinema industry, built on a private Quorum network.",
       highlights: [
@@ -95,9 +96,9 @@ export const data: Resume = {
       role: "Fullstack Engineer",
       company: "B2Expand",
       location: "Lyon, France",
-      startDate: "2017-07",
+      startDate: "2016-11",
       endDate: "2018-11",
-      duration: "1.5 year",
+      duration: "2 year",
       description: "Decentralized applications (dApps) for crypto gaming.",
       highlights: [
         "Designed and built a marketplace for crypto assets using Angular & Ethers.js.",
@@ -116,7 +117,7 @@ export const data: Resume = {
       category: "Development skills",
       tags: [
         "TypeScript",
-        "React",
+        "React/Next.js",
         "Node.js",
         "Cloud plateform",
         "Ethereum",

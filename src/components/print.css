@@ -18,7 +18,7 @@
   }
 
   body {
-    padding-bottom: 0;
+    padding-block: 0;
   }
 
   .main {
@@ -67,9 +67,6 @@
     width: 84px;
     box-shadow: none;
     outline: 1px solid #000;
-  }
-  .hero .contact ul {
-    grid-template-columns: 1fr;
   }
 
   .hero .intro {

@@ -43,7 +43,7 @@ export const data: Resume = {
       company: "Cascade8",
       location: "À distance depuis la France",
       startDate: "2018-11",
-      endDate: "2024-06",
+      endDate: "2023-06",
       duration: "5,5 ans",
       description:
         "Suite de dApps web automatisant la répartition des revenus pour l'industrie du cinéma, construite sur un réseau privé Quorum.",
@@ -93,7 +93,7 @@ export const data: Resume = {
       role: "Ingénieur Fullstack",
       company: "B2Expand",
       location: "Lyon, France",
-      startDate: "2017-07",
+      startDate: "2016-11",
       endDate: "2018-11",
       duration: "1,5 an",
       description: "Applications décentralisées (dApps) pour le gaming crypto.",

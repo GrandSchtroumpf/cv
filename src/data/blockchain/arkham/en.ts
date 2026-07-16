@@ -3,17 +3,15 @@ import { Resume } from "~/types";
 export const data: Resume = {
   profile: {
     name: "François Guezengar",
-    title: "Engineering Manager - Front-end background",
+    title: "Software Engineer",
     status: "Available for full time engagements",
-    timezone: "Nantes - France",
+    timezone: "France",
     email: "francois.guezengar@gmail.com",
     avatarAlt: "Portrait of François Guezengar, smiling, wearing a grey shirt",
     summary: `
-      For the past <strong>10 years</strong> I've specialized in design advanced frontend architecture.
-      As Lead Frontend at Bancor, I owned the Carbon DeFi trading application, collaborating closely with backend, product and design.
-      I always try to understand user expectation so I can suggest ideas to deliver the best <strong>user experience</strong>.<br/>
-      Previously, as CTO at Cascade8, I shipped 7 apps in a fast-moving environment.
-      I <strong>mentored 11 engineers</strong>, collected feedback and built career paths adapted to their profile.`,
+      For the past <strong>10 years</strong> I've specialized in Web3/DeFi infrastructure and advanced frontend architecture.
+      As a DeFi Engineer at Bancor, I owned the Carbon DeFi trading app, and deployed it over <strong>6 chains</strong>.
+      Previously, as CTO at Cascade8, I shipped 7 apps in a <strong>fast-moving environment</strong> with strict deadline while keeping high quality product end-to-end thanks to advanced CI/CD processes.`,
   },
   navigation: [
     { label: "Summary", href: "#summary" },
@@ -24,7 +22,7 @@ export const data: Resume = {
   experience: [
     {
       id: "0005",
-      role: "Lead Frontend",
+      role: "DeFi Engineer",
       company: "Bancor",
       location: "Remote from France",
       startDate: "2023-09",
@@ -33,9 +31,9 @@ export const data: Resume = {
       description:
         "Building automated onchain trading infrastructure with zero slippage.",
       highlights: [
-        "Build and maintain Carbon DeFi dApp, an automated trading protocol, with React.",
-        "Design and ship premium features built specifically for professional traders.",
-        "Create interactive charts to help traders take best decisions.",
+        "Develop and maintain Carbon DeFi dApp, an automated trading protocol live on Ethereum, TON, TAC, Sei, Coti and Celo.",
+        "Support 3 licensees who fork the protocol on additional chains, tailoring deployments to their needs.",
+        "Design and ship premium features built specifically for professional market makers.",
         "Partner closely with product and design, proactively bringing technical solutions to improve discovery experience.",
       ],
       links: [{ name: "Carbon DeFi", url: "https://app.carbondefi.xyz/" }],
@@ -49,7 +47,7 @@ export const data: Resume = {
       endDate: "2023-06",
       duration: "5 years",
       description:
-        "Web-based dApp suite automating revenue sharing for the cinema industry.",
+        "Web-based dApp suite automating revenue sharing for the cinema industry, built on a private Quorum network.",
       highlights: [
         "Architected and stood up a monorepo spanning Ethereum, Nx, Angular, and Google Cloud — 7 applications and 18 shared libraries.",
         "Recruited and trained an 11-person engineering team distributed across four continents.",
@@ -84,7 +82,7 @@ export const data: Resume = {
       description:
         "Core contributor to Remix, the browser-based smart contract IDE.",
       highlights: [
-        "Designed a plugin-based architecture for Remix IDE and migrated the codebase from JavaScript ES3 to TypeScript and React.",
+        "Designed a plugin-based architecture for Remix and migrated the codebase from JavaScript ES3 to TypeScript and React.",
         "Collaborated within a seven-person team distributed across four continents.",
         "Set up unit testing with Jest and end-to-end testing with Cypress.",
         "Organized monthly meetups and was a speaker at blockchain conferences.",
@@ -117,7 +115,7 @@ export const data: Resume = {
       category: "Development skills",
       tags: [
         "TypeScript",
-        "React",
+        "React/Next.js",
         "Node.js",
         "Cloud plateform",
         "Ethereum",
@@ -128,7 +126,7 @@ export const data: Resume = {
       category: "Testing & quality",
       tags: [
         "Unit Testing",
-        "Playwright/Cypress",
+        "E2E (Playwright)",
         "Code Review",
         "Manual Testing",
         "CI/CD",

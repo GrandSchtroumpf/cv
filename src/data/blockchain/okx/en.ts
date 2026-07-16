@@ -3,16 +3,16 @@ import { Resume } from "~/types";
 export const data: Resume = {
   profile: {
     name: "François Guezengar",
-    title: "Lead Blockchain Engineer",
-    status: "Available for full time engagements — Remote",
-    timezone: "Remote (Europe/Paris timezone)",
+    title: "Frontend Business Lead",
+    status: "Available for full time engagements",
+    timezone: "France",
     email: "francois.guezengar@gmail.com",
     avatarAlt: "Portrait of François Guezengar, smiling, wearing a grey shirt",
     summary: `
-      Fullstack and blockchain engineer with over <strong>10 years of experience</strong> taking web products from first idea to product-market fit.
-      I've <strong>led engineering teams</strong> distributed accross the world, architected production Ethereum infrastructure, and built zero-slippage onchain trading tooling used daily by professional market makers.
-      I had a short experience at Sismo where I learned about <strong>decentralized identity</strong> using zk proof and a longer experience at the Ethereum Foundation where I built devtools for the Solidity team.
-    `,
+      For the past <strong>10 years</strong> I've specialized in Web3/DeFi infrastructure and advanced frontend architecture.
+      As a DeFi Engineer at Bancor, I owned the Carbon DeFi trading app, and deployed it over <strong>6 chains</strong>.
+      Previously, as CTO at Cascade8, I shipped 7 apps in a <strong>fast-moving environment</strong> with strict deadline while keeping high quality product end-to-end. I've hired and mentored an engineering team of <strong>11 people</strong>.
+      I collaborate easily with product, design, and QA, bringing a <strong>user centric</strong> view on the table with security, performance and accessibility in mind.`,
   },
   navigation: [
     { label: "Summary", href: "#summary" },
@@ -23,7 +23,7 @@ export const data: Resume = {
   experience: [
     {
       id: "0005",
-      role: "Blockchain Engineer",
+      role: "DeFi Engineer",
       company: "Bancor",
       location: "Remote from France",
       startDate: "2023-09",
@@ -32,10 +32,10 @@ export const data: Resume = {
       description:
         "Building automated onchain trading infrastructure with zero slippage.",
       highlights: [
-        "Develop and maintain Carbon DeFi, an automated trading protocol live on Ethereum, TON, TAC, Sei, Coti and Celo.",
+        "Develop and maintain Carbon DeFi dApp, an automated trading protocol live on Ethereum, TON, TAC, Sei, Coti and Celo.",
         "Support 3 licensees who fork the protocol on additional chains, tailoring deployments to their needs.",
         "Design and ship premium features built specifically for professional market makers.",
-        "Partner closely with product and design within a fast paced international team.",
+        "Partner closely with product and design, proactively bringing technical solutions to improve discovery experience.",
       ],
       links: [{ name: "Carbon DeFi", url: "https://app.carbondefi.xyz/" }],
     },
@@ -45,12 +45,12 @@ export const data: Resume = {
       company: "Cascade8",
       location: "Remote from France",
       startDate: "2018-11",
-      endDate: "2024-06",
-      duration: "5.5 years",
+      endDate: "2023-06",
+      duration: "5 years",
       description:
         "Web-based dApp suite automating revenue sharing for the cinema industry, built on a private Quorum network.",
       highlights: [
-        "Architected and stood up a monorepo spanning Ethereum, Angular, and Google Cloud — 7 applications and 18 shared libraries.",
+        "Architected and stood up a monorepo spanning Ethereum, Nx, Angular, and Google Cloud — 7 applications and 18 shared libraries.",
         "Recruited and trained an 11-person engineering team distributed across four continents.",
         "Owned architecture decisions, ran daily code reviews, and kept the dependency stack current.",
       ],
@@ -67,7 +67,7 @@ export const data: Resume = {
       description: "Independent studio building web2 & web3 products.",
       highlights: [
         "Built Kampoy, a marketplace connecting consumers directly with local farmers, using Angular and Google Cloud.",
-        "Mentored four career-changers through their transition into professional web development.",
+        "Mentored 4 career-changers through their transition into professional web development.",
         "Created and open-sourced ngeth, a local block explorer distributed as a Hardhat plugin.",
       ],
       links: [{ name: "Kampoy", url: "https://www.kampoy.com/" }],
@@ -95,12 +95,12 @@ export const data: Resume = {
       role: "Fullstack Engineer",
       company: "B2Expand",
       location: "Lyon, France",
-      startDate: "2017-07",
+      startDate: "2016-11",
       endDate: "2018-11",
-      duration: "1.5 year",
+      duration: "2 year",
       description: "Decentralized applications (dApps) for crypto gaming.",
       highlights: [
-        "Designed and built a marketplace for crypto assets using Ethers.js.",
+        "Designed and built a marketplace for crypto assets using Angular & Ethers.js.",
         "Managed a team of two developers and two graphic designers shipping web games.",
         "Organized monthly meetups on Ethereum technical topics.",
       ],
@@ -116,9 +116,9 @@ export const data: Resume = {
       category: "Development skills",
       tags: [
         "TypeScript",
-        "Frontend Frameworks",
+        "React",
         "Node.js",
-        "Cloud Devops",
+        "Cloud plateform",
         "Ethereum",
         "Modern CSS ❤️",
       ],
