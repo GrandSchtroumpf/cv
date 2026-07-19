@@ -45,6 +45,13 @@ export const Page = component$<Props>(({ resume }) => {
           <h2 id="summary-heading">
             <span class="block-tag">block #profile</span>Summary
           </h2>
+          {!!profile.keywords?.length && (
+            <ul aria-label="keywords" class="tag-list">
+              {profile.keywords.map(word => (
+                <li class="tag core" key={word}>{word}</li>
+              ))}
+            </ul>
+          )}
           <p class="summary-text" dangerouslySetInnerHTML={profile.summary}></p>
         </section>
 

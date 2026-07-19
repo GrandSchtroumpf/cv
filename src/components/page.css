@@ -19,13 +19,14 @@
 
   .section-block {
     padding-inline: 1rem;
+    display: grid;
+    gap: 1.5rem;
   }
 
   .section-block h2 {
     font-size: 1.45rem;
     display: grid;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
     justify-items: start;
   }
   .block-tag {

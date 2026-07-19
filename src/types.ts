@@ -13,6 +13,7 @@ export interface ProfileData {
   avatarAlt: string;
   email: string;
   summary: string;
+  keywords?: string[];
 }
 
 export interface ExperienceItem {

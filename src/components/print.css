@@ -1,6 +1,9 @@
 @media print {
   @page {
     margin: 14mm 16mm;
+    @bottom-center {
+      content: "Page " counter(pageNumber);
+    }
   }
   .no-print {
     display: none !important;
@@ -26,7 +29,7 @@
     padding: 0;
     display: block; /* Needed for firefox to break */
     & > * {
-      margin-block: 1.5rem;
+      margin-block: 2rem;
     }
   }
 
@@ -77,9 +80,12 @@
     gap: 0rem;
   }
 
+  .section-block {
+    gap: 1.3rem;
+  }
+
   .section-block h2 {
     break-after: avoid;
-    margin-bottom: 0.9rem;
   }
   .block-tag {
     display: none;
@@ -95,6 +101,7 @@
     position: relative;
   }
   .chain .block {
+    break-inside: avoid-page;
     grid-template-columns: 1fr;
   }
   .chain .block::before,
