@@ -3,17 +3,16 @@ import { Resume } from "~/types";
 export const data: Resume = {
   profile: {
     name: "François Guezengar",
-    title: "Tech Lead, dApp",
+    title: "Lead Web Engineer",
     status: "Available for full time engagements",
-    timezone: "France",
+    timezone: "Nantes - France (remote)",
     email: "francois.guezengar@gmail.com",
     avatarAlt: "Portrait of François Guezengar, smiling, wearing a grey shirt",
-    keywords: ['Angular/Nx', 'Multichain Defi', 'Mentor', 'Performance', 'CI/CD', 'Security'],
+    keywords: ['React', 'Ship fast', 'User centric','Performance', 'CI/CD', 'Communication', 'Remote exp'],
     summary: `
-      <b>I'm the perfect match for the Tech Lead dApp position at 1inch !</b><br/>
-      For the past <strong>10 years</strong> I've specialized in Web3/DeFi infrastructure and advanced Angular architecture.
-      As a DeFi Engineer at Bancor, I built and maintained Carbon DeFi across <strong>6 chains</strong>. Previously, as CTO at Cascade8, I architected a massive Nx monorepo spanning <strong>Angular, Ethereum, and 18 libraries</strong>. I've hired, mentored and managed an engineering team of <strong>11 people</strong>.
-      I collaborate easily with product, design, backend and QA, bringing a <strong>user centric</strong> view on the table with security, performance and accessibility in mind.`,
+      For the past 10 years I've specialized in building <strong>reliability frontend infrastructures</strong> and maintainable design systems with <strong>performance and accessibility</strong> in mind.
+      As CTO at Cascade8 I set up a large monorepo with 7 apps & <strong>18 shared libraries</strong>, making it resilient through <strong>CI/CD pipelines</strong>.<br/>
+      I thrive in <strong>fast-paced remote environement</strong> where clear communication fuels success.`,
   },
   navigation: [
     { label: "Summary", href: "#summary" },
@@ -24,19 +23,19 @@ export const data: Resume = {
   experience: [
     {
       id: "0005",
-      role: "DeFi Engineer",
+      role: "Lead Frontend",
       company: "Bancor",
       location: "Remote from France",
       startDate: "2023-09",
       endDate: "2026-06",
       duration: "3 years",
       description:
-        "Building automated onchain trading infrastructure with zero slippage.",
+        "Owned the Carbon app for automated onchain trading infrastructure (React/Node.js).",
       highlights: [
-        "Develop and maintain Carbon DeFi dApp, an automated trading protocol live on Ethereum, TON, TAC, Sei, Coti and Celo.",
-        "Support 3 licensees who fork the protocol on additional chains, tailoring deployments to their needs.",
-        "Design and ship premium features built specifically for professional market makers.",
-        "Partner closely with product and design making sure the apps meets the user needs and remains accessible.",
+        "Build and maintain Carbon DeFi dApp, an automated trading protocol, with React.",
+        "Integrate an adaptative design system for white branding.",
+        "Create interactive charts and data viz to help traders take best decisions.",
+        "Partner closely with product and design, proactively bringing technical solutions to improve discovery experience.",
       ],
       links: [{ name: "Carbon DeFi", url: "https://app.carbondefi.xyz/" }],
     },
@@ -49,11 +48,12 @@ export const data: Resume = {
       endDate: "2023-06",
       duration: "5 years",
       description:
-        "Web-based dApp suite automating revenue sharing for the cinema industry, built on a private Quorum network.",
+        "Web-based dApp suite automating revenue sharing for the cinema industry (Angular / Google Cloud).",
       highlights: [
         "Architected and stood up a monorepo spanning Ethereum, Nx, Angular, and Google Cloud — 7 applications and 18 shared libraries.",
+        "Ship fast with strict deadline and while keeping long term reusability of the code.",
+        "Automate tests & deployment through CI/CD and improve devX with CLIs tools.",
         "Recruited and trained an 11-person engineering team distributed across four continents.",
-        "Owned architecture decisions, ran daily code reviews, and kept the dependency stack current.",
       ],
       links: [],
     },
@@ -65,11 +65,11 @@ export const data: Resume = {
       startDate: "2019-01",
       endDate: "2023-01",
       duration: "4 years",
-      description: "Independent studio building web2 & web3 products.",
+      description: "Build Kampoy app end-to-end, a realtime marketplace for farmers (Angular / Google Cloud).",
       highlights: [
-        "Built Kampoy, a marketplace connecting consumers directly with local farmers, using Angular and Google Cloud.",
-        "Mentored 4 career-changers through their transition into professional web development.",
+        "Strong focus on accessibilty, offline, and UX to simplify the use for farmers and (old) customers.",
         "Created and open-sourced ngeth, a local block explorer distributed as a Hardhat plugin.",
+        "Mentored 4 career-changers through their transition into professional web development.",
       ],
       links: [{ name: "Kampoy", url: "https://www.kampoy.com/" }],
     },
@@ -82,10 +82,10 @@ export const data: Resume = {
       endDate: "2021-03",
       duration: "2.5 years",
       description:
-        "Core contributor to Remix, the browser-based smart contract IDE.",
+        "Core contributor to Remix, the browser-based smart contract IDE (React).",
       highlights: [
-        "Designed a plugin-based architecture for Remix and migrated the codebase from JavaScript ES3 to TypeScript and React.",
-        "Collaborated within a seven-person team distributed across four continents.",
+        "Designed a plugin-based architecture for Remix IDE and migrated the codebase from JavaScript ES3 to TypeScript and React.",
+        "High focus on cybersecurity as the IDE could deploy smart contract on Ethereum.",
         "Set up unit testing with Jest and end-to-end testing with Cypress.",
         "Organized monthly meetups and was a speaker at blockchain conferences.",
       ],
@@ -99,7 +99,7 @@ export const data: Resume = {
       startDate: "2016-11",
       endDate: "2018-11",
       duration: "2 year",
-      description: "Decentralized applications (dApps) for crypto gaming.",
+      description: "Decentralized applications (dApps) for crypto gaming (Angular).",
       highlights: [
         "Designed and built a marketplace for crypto assets using Angular & Ethers.js.",
         "Managed a team of two developers and two graphic designers shipping web games.",
@@ -117,10 +117,10 @@ export const data: Resume = {
       category: "Development skills",
       tags: [
         "TypeScript",
-        "Angular / Nx",
-        "Node.js",
-        "Google Cloud",
-        "Ethereum",
+        "React",
+        "WCAG Accessibility",
+        "Cloud plateform",
+        "Cybersecurity",
         "Modern CSS ❤️",
       ],
     },
@@ -128,7 +128,7 @@ export const data: Resume = {
       category: "Testing & quality",
       tags: [
         "Unit Testing",
-        "E2E (Playwright)",
+        "Playwright/Cypress",
         "Code Review",
         "Manual Testing",
         "CI/CD",
